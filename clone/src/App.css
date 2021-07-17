@@ -1,0 +1,12 @@
+.nav_logo {
+  /* height: 6vh; */
+  width: 15vw;
+ 
+}
+.hamburger {
+  border: none;
+  background: none;
+}
+.hamburger img{
+  height: 4vh;
+}
