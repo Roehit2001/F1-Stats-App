@@ -1,12 +1,47 @@
-.nav_logo {
-  /* height: 6vh; */
-  width: 15vw;
+.race{
+  border: none;
+  box-shadow: 3px 3px 10px #e10600;
+
+}
+.race .race_number {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  border: solid red;
+}
+footer {
+  background-color: #e10600;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2.5%;
+}
+footer a{
+  border: solid;
+  background-color: #fff;
+  color: #e10600;
+  border-radius: 50%;
+  padding: 1%;
+  margin: 2.5%;
+  border-color: #fff;
+  font-size: large;
+}
+footer a:hover{
+  border: solid;
+  background-color: #e10600;
+  color: #fff;
+  
  
 }
-.hamburger {
-  border: none;
-  background: none;
+footer h5{
+  font-size: 1.25rem;
 }
-.hamburger img{
-  height: 4vh;
+footer p{
+  font-size: 1rem;
+}
+#home{
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
