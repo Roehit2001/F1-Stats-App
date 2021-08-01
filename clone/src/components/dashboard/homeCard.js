@@ -25,11 +25,8 @@ function HomeCard() {
             await fetch('http://ergast.com/api/f1/current/last/results')
                 .then(res => res.text())
                 .then(data => {
-                    let parser = new DOMParser()
-                    let xmlDoc = parser.parseFromString(data, 'text/xml')
-                    console.log(xmlDoc)
                     parseString(data, function (err, result) {
-                        console.log('call 1', result);
+                        // console.log('call 1', result);
                         setRoundCurrent(result.MRData.RaceTable[0].$.round)
                         setRoundPrevious(+result.MRData.RaceTable[0].$.round - 1)
                         setRoundNext(+result.MRData.RaceTable[0].$.round + 1)
@@ -50,16 +47,13 @@ function HomeCard() {
 
     useEffect(() => {
         async function apicall2() {
-            console.log(roundPrevious)
+            // console.log(roundPrevious)
             fetch(`https://ergast.com/api/f1/current/${roundPrevious}/results`)
                 .then(res => res.text())
                 .then(data => {
-                    let parser = new DOMParser()
-                    let xmlDoc = parser.parseFromString(data, 'text/xml')
-                    console.log(xmlDoc)
                     parseString(data, function (err, result) {
-                        console.log(result);
-                        console.log('call 2')
+                        // console.log(result);
+                        // console.log('call 2')
                         // setRoundPrevious(result.MRData.RaceTable[0].$.round)
                         setCircuitPrevious(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNamePrevious(result.MRData.RaceTable[0].Race[0].RaceName)
@@ -77,16 +71,13 @@ function HomeCard() {
 
     useEffect(() => {
         async function apicall3() {
-            console.log(roundNext)
+            // console.log(roundNext)
             fetch(`https://ergast.com/api/f1/current/${roundNext}`)
                 .then(res => res.text())
                 .then(data => {
-                    let parser = new DOMParser()
-                    let xmlDoc = parser.parseFromString(data, 'text/xml')
-                    console.log(xmlDoc)
                     parseString(data, function (err, result) {
-                        console.log(result);
-                        console.log('call 3')
+                        // console.log(result);
+                        // console.log('call 3')
                         setCircuitNext(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNameNext(result.MRData.RaceTable[0].Race[0].RaceName)
                     })

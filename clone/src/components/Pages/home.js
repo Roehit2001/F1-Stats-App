@@ -1,4 +1,5 @@
 import React from "react";
+import ConstructorsStandings from "../dashboard/constructorsStandings";
 import DriversStandings from "../dashboard/driversStandings";
 import HomeCard from "../dashboard/homeCard";
 function Home() {
@@ -7,8 +8,11 @@ function Home() {
             <HomeCard />
             <div className="row">
                 <div className="container">
-                    <div className="col-lg-6">
+                    <div className="half-cont col-lg-6">
                         <DriversStandings />
+                    </div>
+                    <div className="half-cont col-lg-6">
+                        <ConstructorsStandings />
                     </div>
                 </div>
             </div>

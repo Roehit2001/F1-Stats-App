@@ -1,0 +1,258 @@
+[
+    {
+        "Location": "Abu Dhabi",
+        "Name": "Yas Marina Circuit",
+        "Opened": 2009,
+        "FirstGP": 2009,
+        "Length": "5554m",
+        "Altitude": "9m"
+    },
+    {
+        "Location": "Austin",
+        "Name": "Circuit of the Americas",
+        "Opened": 2012,
+        "FirstGP": 2012,
+        "Length": "5513m",
+        "Altitude": "130m"
+    },
+    {
+        "Location": "Baku",
+        "Name": "Baku City Circuit",
+        "Opened": 2016,
+        "FirstGP": 2016,
+        "Length": "6003m",
+        "Altitude": "-25m"
+    },
+    {
+        "Location": "Barcelona",
+        "Name": "Circuit de Barcelona-Catalunya",
+        "Opened": 1991,
+        "FirstGP": 1991,
+        "Length": "4655m",
+        "Altitude": "165m"
+    },
+    {
+        "Location": "Budapest",
+        "Name": "Hungaroring",
+        "Opened": 1986,
+        "FirstGP": 1986,
+        "Length": "4381m",
+        "Altitude": "239m"
+    },
+    {
+        "Location": "Estoril",
+        "Name": "Autódromo do Estoril",
+        "Opened": 1972,
+        "FirstGP": 1984,
+        "Length": "4349m",
+        "Altitude": "80m"
+    },
+    {
+        "Location": "Hockenheim",
+        "Name": "Hockenheimring",
+        "Opened": 1932,
+        "FirstGP": 1970,
+        "Length": "4574m",
+        "Altitude": "148m"
+    },
+    {
+        "Location": "Imola",
+        "Name": "Autodromo Enzo e Dino Ferrari",
+        "Opened": 1953,
+        "FirstGP": 1980,
+        "Length": "4909m",
+        "Altitude": "47m"
+    },
+    {
+        "Location": "Istanbul",
+        "Name": "Intercity Istanbul Park",
+        "Opened": 2005,
+        "FirstGP": 2005,
+        "Length": "5338m",
+        "Altitude": "150m"
+    },
+    {
+        "Location": "Jacarepaguá",
+        "Name": "Autódromo Internacional Nelson Piquet",
+        "Opened": 1977,
+        "FirstGP": 1978,
+        "Length": "5031m",
+        "Altitude": "3m"
+    },
+    {
+        "Location": "Jeddah",
+        "Name": "Jeddah Street Circuit",
+        "Opened": 2021,
+        "FirstGP": 2021,
+        "Length": "6175m",
+        "Altitude": "12m"
+    },
+    {
+        "Location": "Le Castellet",
+        "Name": "Circuit Paul Ricard",
+        "Opened": 1969,
+        "FirstGP": 1971,
+        "Length": "5842m",
+        "Altitude": "408m"
+    },
+    {
+        "Location": "Magny-Cours",
+        "Name": "Circuit de Nevers Magny-Cours",
+        "Opened": 1960,
+        "FirstGP": 1991,
+        "Length": "4412m",
+        "Altitude": "230m"
+    },
+    {
+        "Location": "Melbourne",
+        "Name": "Albert Park Grand Prix Circuit",
+        "Opened": 1953,
+        "FirstGP": 1996,
+        "Length": "5027m",
+        "Altitude": "10m"
+    },
+    {
+        "Location": "Mexico City",
+        "Name": "Autódromo Hermanos Rodríguez",
+        "Opened": 1962,
+        "FirstGP": 1963,
+        "Length": "4304m",
+        "Altitude": "2232m"
+    },
+    {
+        "Location": "Monte Carlo",
+        "Name": "Circuit de Monaco",
+        "Opened": 1929,
+        "FirstGP": 1929,
+        "Length": "3337m",
+        "Altitude": "47m"
+    },
+    {
+        "Location": "Montreal",
+        "Name": "Circuit Gilles-Villeneuve",
+        "Opened": 1978,
+        "FirstGP": 1978,
+        "Length": "4361m",
+        "Altitude": "13m"
+    },
+    {
+        "Location": "Monza",
+        "Name": "Autodromo Nazionale di Monza",
+        "Opened": 1922,
+        "FirstGP": 1950,
+        "Length": "5793m",
+        "Altitude": "142m"
+    },
+    {
+        "Location": "Nürburg",
+        "Name": "Nürburgring",
+        "Opened": 1927,
+        "FirstGP": 1984,
+        "Length": "5148m",
+        "Altitude": "627m"
+    },
+    {
+        "Location": "Portimão",
+        "Name": "Autódromo Internacional do Algarve",
+        "Opened": 2008,
+        "FirstGP": 2020,
+        "Length": "4653m",
+        "Altitude": "44m"
+    },
+    {
+        "Location": "Sakhir",
+        "Name": "Bahrain International Circuit",
+        "Opened": 2002,
+        "FirstGP": 2004,
+        "Length": "5412m",
+        "Altitude": "-16m"
+    },
+    {
+        "Location": "Sao Paulo",
+        "Name": "Autódromo José Carlos Pace",
+        "Opened": 1940,
+        "FirstGP": 1972,
+        "Length": "4309m",
+        "Altitude": "765m"
+    },
+    {
+        "Location": "Scarperia e San Piero",
+        "Name": "Autodromo Internazionale del Mugello",
+        "Opened": 1914,
+        "FirstGP": 2020,
+        "Length": "5245m",
+        "Altitude": "292m"
+    },
+    {
+        "Location": "Sepang",
+        "Name": "Sepang International Circuit",
+        "Opened": 1999,
+        "FirstGP": 1999,
+        "Length": "5543m",
+        "Altitude": "39m"
+    },
+    {
+        "Location": "Shanghai",
+        "Name": "Shanghai International Circuit",
+        "Opened": 2004,
+        "FirstGP": 2004,
+        "Length": "5451m",
+        "Altitude": "14m"
+    },
+    {
+        "Location": "Silverstone",
+        "Name": "Silverstone Circuit",
+        "Opened": 1948,
+        "FirstGP": 1950,
+        "Length": "5891m",
+        "Altitude": "196m"
+    },
+    {
+        "Location": "Singapore",
+        "Name": "Marina Bay Street Circuit",
+        "Opened": 2008,
+        "FirstGP": 2008,
+        "Length": "5063m",
+        "Altitude": "18m"
+    },
+    {
+        "Location": "Sochi",
+        "Name": "Sochi Autodrom",
+        "Opened": 2014,
+        "FirstGP": 2014,
+        "Length": "5848m",
+        "Altitude": "23m"
+    },
+    {
+        "Location": "Spa Francorchamps",
+        "Name": "Circuit de Spa-Francorchamps",
+        "Opened": 1925,
+        "FirstGP": 1950,
+        "Length": "7004m",
+        "Altitude": "413m"
+    },
+    {
+        "Location": "Spielberg",
+        "Name": "Red Bull Ring",
+        "Opened": 1969,
+        "FirstGP": 1970,
+        "Length": "4318m",
+        "Altitude": "721m"
+    },
+    {
+        "Location": "Suzuka",
+        "Name": "Suzuka Circuit",
+        "Opened": 1962,
+        "FirstGP": 1987,
+        "Length": "5807m",
+        "Altitude": "60m"
+    },
+    {
+        "Location": "Zandvoort",
+        "Name": "Circuit Park Zandvoort",
+        "Opened": 1948,
+        "FirstGP": 1952,
+        "Length": "4259m",
+        "Altitude": "3m"
+    }
+]

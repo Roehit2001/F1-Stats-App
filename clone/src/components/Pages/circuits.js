@@ -1,7 +1,8 @@
 import React from "react";
+import CircuitCard from "../circuits Dashboard/circuitCard";
 function Circuits() {
     return (
-        <div>hi</div>
+        <CircuitCard />
     )
 }
 export default Circuits

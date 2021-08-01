@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { DriversList } from "./RaceCard";
+import { ConstructorsList } from "./RaceCard";
 var parseString = require('xml2js').parseString;
 
-function DriversStandings() {
-    const [driverStandings, setDriverStandings] = useState([]);
+function ConstructorsStandings() {
+    const [constructorsStandings, setConstructorsStandings] = useState([]);
 
     useEffect(() => {
-        async function apicallDriverStandings() {
-            await fetch('http://ergast.com/api/f1/current/last/driverStandings')
+        async function apicallconstructorsStandings() {
+            await fetch('http://ergast.com/api/f1/current/last/constructorStandings')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
                         console.log('call DS', result)
-                        setDriverStandings(result)
-                        console.log(driverStandings)
+                        setConstructorsStandings(result)
+                        console.log(constructorsStandings)
                     })
                 })
                 .catch(err => console.log(err));
         }
-        apicallDriverStandings()
+        apicallconstructorsStandings()
     }, [])
 
 
@@ -30,13 +30,13 @@ function DriversStandings() {
             <div className="container">
                 <div className="card_cust h-100">
                     <div className="col-12">
-                        <h2>Drivers Standings</h2>
+                        <h2>Constructors Standings</h2>
                     </div>
-                    <DriversList driversList={driverStandings} />
+                    <ConstructorsList constructorsList={constructorsStandings} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default DriversStandings
+export default ConstructorsStandings

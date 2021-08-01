@@ -1,3 +1,4 @@
+
 .race{
   border: none;
   box-shadow: 3px 3px 10px #e10600;
@@ -10,13 +11,20 @@
   border-radius: 50%;
   border: solid red;
 }
+#footer{
+  display: flex; 
+flex-flow: column no-wrap; 
+justify-content: space-between;
+}
 footer {
   background-color: #e10600;
   color: #fff;
-  position: absolute;
-  bottom: 0;
+  /* position:absolute;
+  bottom: 0; */
   width: 100%;
   padding: 2.5%;
+
+  align-self: flex-end;
 }
 footer a{
   border: solid;
@@ -44,4 +52,46 @@ footer p{
 #home{
   padding-top: 5%;
   padding-bottom: 5%;
+  margin-bottom: 5%;
+  min-height: 100vh;
+}
+.indCard{
+  width: 100%;
+  height: fit-content;
+  /* display: inline; */
+}
+.indCard .position{
+  width: 10%;display: inline-block;
+}
+.indCard .number{
+  width: 10%;display: inline-block;
+}
+.indCard .name{
+  width: 65%;display: inline-block;
+}
+.indCard .points{
+  width: 15%;display: inline-block;
+}
+.pointsTable{
+  margin-bottom: 10%;
+}
+.half-cont{
+  display: inline-block;
+}
+
+.circuitCard{
+  width: 100%;
+}
+#circuitCard .card-deck img{
+  width: 30%;
+}
+#circuitCard .card-deck{
+  font-size: 0;
+  margin-bottom: 5%;
+}
+#circuitCard .card-deck .circuitCard .card-body{
+  font-size: medium;
+}
+#circuitCard .card-deck .circuitCard .card-footer{
+  font-size: medium;
 }
