@@ -1,7 +1,9 @@
 import React from "react";
+import DriversCard from "../drivers Dashboard/driversCard";
+
 function Drivers() {
     return (
-        <div>hi</div>
+        <DriversCard />
     )
 }
 export default Drivers

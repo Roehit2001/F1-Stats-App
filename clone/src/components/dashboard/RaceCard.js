@@ -14,7 +14,7 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
                 <p>{round}</p>
             </div>
             <div className="card-img-top">
-                <img id="prev-card-img" src="" alt="" />
+                <img id="prev-card-img" src={"/Assets/circuitLayouts/" + circuit_name + ".png"} alt="" />
             </div>
             <div className="card-img-overlay">
                 <h3>{circuit_name}</h3>
@@ -43,7 +43,7 @@ const NextRace = ({ round, circuit, race }) => {
                 <p>{round}</p>
             </div>
             <div className="card-img-top">
-                <img src="" alt="" />
+                <img src={"/Assets/circuitLayouts/" + circuit + ".png"} alt="" />
             </div>
             <div className="card-img-overlay">
                 <h2>{race}</h2>
