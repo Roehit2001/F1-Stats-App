@@ -95,3 +95,10 @@ footer p{
 #circuitCard .card-deck .circuitCard .card-footer{
   font-size: medium;
 }
+#yearTable_Table tbody{
+  overflow: auto;
+  max-height: 160px;
+}
+#yearTable_Table thead{
+  position: sticky;
+}
