@@ -17,7 +17,7 @@ function Navbar() {
                         <NavLink className="nav-link" to="/constructors"><button>Constructors</button></NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/seasons"><button>Seasons</button></NavLink>
+                        <NavLink className="nav-link" to="/race_results"><button>Results</button></NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/circuits"><button>Circuits</button></NavLink>

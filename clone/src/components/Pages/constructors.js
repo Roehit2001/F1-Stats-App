@@ -1,7 +1,8 @@
 import React from "react";
+import ConstructorsCard from "../constructors Dashboard/constructorsCard";
 function Constructors() {
     return (
-        <div>hi</div>
+        <ConstructorsCard />
     )
 }
 export default Constructors

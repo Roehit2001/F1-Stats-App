@@ -9,7 +9,7 @@ function CircuitCard() {
 
     useEffect(() => {
         async function apicall() {
-            await fetch('http://ergast.com/api/f1/current/circuits')
+            await fetch('https://ergast.com/api/f1/current/circuits')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {

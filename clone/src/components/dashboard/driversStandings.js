@@ -7,7 +7,7 @@ function DriversStandings() {
 
     useEffect(() => {
         async function apicallDriverStandings() {
-            await fetch('http://ergast.com/api/f1/current/last/driverStandings')
+            await fetch('https://ergast.com/api/f1/current/last/driverStandings')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {

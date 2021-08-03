@@ -1,7 +1,7 @@
 import React from "react";
-function Seasons() {
+function RaceResults() {
     return (
         <div>hi</div>
     )
 }
-export default Seasons
+export default RaceResults

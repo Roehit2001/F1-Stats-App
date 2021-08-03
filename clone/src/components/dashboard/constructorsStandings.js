@@ -7,7 +7,7 @@ function ConstructorsStandings() {
 
     useEffect(() => {
         async function apicallconstructorsStandings() {
-            await fetch('http://ergast.com/api/f1/current/last/constructorStandings')
+            await fetch('https://ergast.com/api/f1/current/last/constructorStandings')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {

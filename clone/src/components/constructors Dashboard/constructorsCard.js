@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import DriverIndCard from './driverIndCard';
+import ConstructorIndCard from './constructorIndCard';
 
 var parseString = require('xml2js').parseString;
 
-function DriversCard() {
+function ConstructorsCard() {
 
-    const [driversData, setDriversData] = useState([]);
+    const [constructorsData, setConstructorsData] = useState([]);
 
     useEffect(() => {
         async function apicall() {
-            await fetch('https://ergast.com/api/f1/current/drivers')
+            await fetch('https://ergast.com/api/f1/current/constructors')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        setDriversData(result);
+                        setConstructorsData(result);
+                        console.log(err)
                     })
 
                 })
@@ -22,12 +23,12 @@ function DriversCard() {
         apicall()
     }, [])
     return (
-        <div className="container" id="driverCard">
+        <div className="container" id="constructorCard">
             <div className="row  text-center">
-                <DriverIndCard driversList={driversData} />
+                <ConstructorIndCard constructorsList={constructorsData} />
             </div>
         </div>
     )
 }
 
-export default DriversCard
+export default ConstructorsCard

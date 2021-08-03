@@ -22,7 +22,7 @@ function HomeCard() {
 
     useEffect(() => {
         async function apicall1() {
-            await fetch('http://ergast.com/api/f1/current/last/results')
+            await fetch('https://ergast.com/api/f1/current/last/results')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
