@@ -1,8 +1,8 @@
 const DriverIndCard = ({ driversList }) => {
     if (driversList.length === 0) {
         return (
-            <div className="card race h-100">
-                <h2>Loading..</h2>
+            <div className="mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
             </div>
         )
     }

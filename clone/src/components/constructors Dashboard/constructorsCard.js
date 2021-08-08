@@ -14,7 +14,7 @@ function ConstructorsCard() {
                 .then(data => {
                     parseString(data, function (err, result) {
                         setConstructorsData(result);
-                        console.log(err)
+                        console.log(result)
                     })
 
                 })
@@ -22,8 +22,16 @@ function ConstructorsCard() {
         }
         apicall()
     }, [])
+    if (constructorsData.length === 0) {
+        return (
+            <div className="mx-auto large">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
+            </div>
+        )
+    }
     return (
-        <div className="container" id="constructorCard">
+        <div className="container text-center" id="constructorCard">
+            <h1 className="pt-4">Constructors of {constructorsData.MRData.ConstructorTable[0].$.season} Season</h1>
             <div className="row  text-center">
                 <ConstructorIndCard constructorsList={constructorsData} />
             </div>

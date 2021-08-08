@@ -20,7 +20,9 @@ function Schedule(schedule) {
     }, [schedule])
 
     return (
-        <YearTableCard yearData={selectedSchedule} />
+        <div className="container">
+            <YearTableCard yearData={selectedSchedule} />
+        </div>
     );
 
 }

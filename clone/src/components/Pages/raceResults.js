@@ -16,9 +16,9 @@ function RaceResults() {
 
 
     return (
-        <div className="p-5">
-            <form onSubmit={handlesubmit}>
-                <select className="form-control col-lg-6 form-control-lg" onChange={handleChange} value={year}>
+        <div className="p-5 mx-auto" id="raceResults">
+            <form onSubmit={handlesubmit} className="mx-auto">
+                <select className="  " onChange={handleChange} value={year}>
                     <option value={currentYear - 0} >{currentYear - 0}</option>
                     <option value={currentYear - 1} >{currentYear - 1}</option>
                     <option value={currentYear - 2} >{currentYear - 2}</option>

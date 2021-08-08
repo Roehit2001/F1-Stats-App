@@ -23,8 +23,16 @@ function CircuitCard() {
         apicall()
 
     }, [])
+    if (circuitsData.length === 0) {
+        return (
+            <div className="mx-auto large">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
+            </div>
+        )
+    }
     return (
-        <div className="container" id="circuitCard">
+        <div className="container text-center" id="circuitCard">
+            <h1 className="pt-4">Constructors of {circuitsData.MRData.CircuitTable[0].$.season} Season</h1>
             <div className="row  text-center">
 
                 <CircuitIndCard circuitsList={circuitsData} />

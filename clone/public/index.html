@@ -53,7 +53,12 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="/scripts/date.js"></script>
-
+  <script>
+    function footer() {
+      var footer_height = document.getElementById("footer").offsetHeight;
+      // var footer_header_height = document.getElementById("footer-header").offsetHeight;
+      document.getElementById("Content-section").style.top = footer_height + "px";
+    }</script>
 </body>
 
 </html>

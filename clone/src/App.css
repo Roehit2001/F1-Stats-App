@@ -2,6 +2,13 @@ body{
   background-color: #111213ff;
   color: #fff;
 }
+#bottomImg{
+width: 50%;
+margin-bottom: -5%;
+margin-left: -3%;
+margin-top: -12%;
+ align-self: flex-end;
+}
 /* Footer CSS */
 #footer{
   display: flex; 
@@ -64,6 +71,113 @@ box-shadow: -5px 5px #dc3545 ;
 .navbar-brand img{
   width: 6%;
 }
+/* preloader css */
+.preloader{
+  margin-left: 0% !important;
+  margin-right: 0 !important;
+  width: 50vw;
+  height: 50vh;
+  margin-bottom: 60vh;
+padding-top: 10%;
+}
+.large .preloader{
+  width: 80%;
+  margin-left: 10%;
+  height: 80vh;
+}
+.small .preloader{
+  width: 80%;
+  height: 80%;
+}
+/* Drivers CSS*/
+#driverCard , #constructorCard , #circuitCard{
+  margin-bottom: 10%;
+  /* display: inline; */
+}
+.driverCard{
+background: #212224ff;
+border-style: groove;
+border-color: #e10600;
+box-shadow: 5px -5px #e10600;
+}
+.driverCard a:hover{
+  text-decoration: underline;
+  color: #e10600;
+}
+.driverCard a{
+  text-decoration: none;
+  color: #e10600;
+}
+/* Constructors CSS */
+.constructorCard {
+  padding: 5%;
+  background: #212224ff;
+border-style: groove;
+border-color: #e10600;
+box-shadow: 5px -5px #e10600;
+}
+.constructorCard a:hover{
+  text-decoration: underline;
+  color: #e10600;
+}
+.constructorCard a{
+  text-decoration: none;
+  color: #e10600;
+}
+/* Circuits CSS */
+#circuitCard{
+  color: #111213ff;
+}
+.circuitCard {
+  
+  background: #212224ff;
+border-style: groove;
+border-color: #e10600;
+box-shadow: 5px -5px #e10600;
+}
+.circuitCard  a:hover{
+  text-decoration: underline;
+  color: #e10600;
+}
+.circuitCard  a{
+  text-decoration: none;
+  color: #e10600;
+}
+.circuitCard .card-img-top{
+  width: 40%;
+  height: 20%;
+}
+.circuitCard .layout {
+  width: 90%;
+  margin-left: 5%;
+}
+.circuitCard .card-body{
+  padding-bottom: 0;
+}
+.circuitCard .card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0,0,0,.03);
+  border-top: 2px solid rgb(#e10600 / 64%);
+}
+.circuitCard .card-text{
+  color: #fff;
+}
+.circuitCard small{
+  color: #fff;
+}
+.CCflag img{
+  width: 64px;
+  height: 64px;
+}
+#bottom{
+  
+  border-bottom: double;border-color: #e10600;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #111213ff;
+  /* height: 0.5vh; */
+}
 .race{
   border: none;
   box-shadow: 3px 3px 10px #e10600;
@@ -105,22 +219,21 @@ box-shadow: -5px 5px #dc3545 ;
 .half-cont{
   display: inline-block;
 }
-
-.circuitCard{
-  width: 100%;
+/* Results CSS */
+#raceResults select{
+  width: 20%;
+  text-align: center;
+  height: 5vh;
+  font-size: 3vh;
+  margin-left: 40%;
+  background-color: transparent;
+  border-color: #e10600;
+  color: #fff;
 }
-#circuitCard .card-deck img{
-  width: 30%;
-}
-#circuitCard .card-deck{
-  font-size: 0;
-  margin-bottom: 5%;
-}
-#circuitCard .card-deck .circuitCard .card-body{
-  font-size: medium;
-}
-#circuitCard .card-deck .circuitCard .card-footer{
-  font-size: medium;
+#raceResults select:focus{
+  background-color: #111213ff;
+  border-color: #e10600;
+  color: #fff;
 }
 #yearTable_Table tbody{
   overflow: auto;
@@ -128,4 +241,53 @@ box-shadow: -5px 5px #dc3545 ;
 }
 #yearTable_Table thead{
   position: sticky;
+}
+#yearTable_Table, #yearTable_Table td, #yearTable_Table th {
+  border-style: double;
+  border-color: #e10600;
+}
+#yearTable_Table th{
+  color: #e10600;
+  text-align: center;
+}
+#yearTable_Table tr{
+  background-color: #111213ff;
+  border-color: #e10600;
+}
+.resultsBtn{
+  border-color: #e10600;
+  background-color: transparent;
+  color: #e10600;
+  box-shadow: 5px 5px #e10600;
+}
+.resultsBtn:hover{
+  border-color: #e10600;
+  background-color: transparent;
+  color: #e10600;
+  box-shadow: 5px -5px #e10600;
+}
+#ResultsTable_Table ,#ResultsTable_Table td, #ResultsTable_Table th{
+  border-style: double;
+  border-color: #e10600;
+}
+#ResultsTable_Table th{
+  color: #e10600;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.container-cust{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.header-year{
+  color: #e10600;
+  font-size: 1.5rem;
+}
+.resultsTab h1{
+  color: #e10600;
+}
+.resultsTab h5{
+  margin-bottom: 2.5%;
 }

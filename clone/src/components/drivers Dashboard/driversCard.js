@@ -14,6 +14,7 @@ function DriversCard() {
                 .then(data => {
                     parseString(data, function (err, result) {
                         setDriversData(result);
+                        console.log(result)
                     })
 
                 })
@@ -21,8 +22,16 @@ function DriversCard() {
         }
         apicall()
     }, [])
+    if (driversData.length === 0) {
+        return (
+            <div className="mx-auto large">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
+            </div>
+        )
+    }
     return (
-        <div className="container" id="driverCard">
+        <div className="container text-center" id="driverCard">
+            <h1 className="pt-4">Drivers of {driversData.MRData.DriverTable[0].$.season} Season</h1>
             <div className="row  text-center">
                 <DriverIndCard driversList={driversData} />
             </div>

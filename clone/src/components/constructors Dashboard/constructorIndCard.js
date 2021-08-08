@@ -1,8 +1,8 @@
 const ConstructorIndCard = ({ constructorsList }) => {
     if (constructorsList.length === 0) {
         return (
-            <div className="card race h-100">
-                <h2>Loading..</h2>
+            <div className="mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
             </div>
         )
     }
@@ -16,7 +16,7 @@ const ConstructorIndCard = ({ constructorsList }) => {
                     return (
                         <div className="col-lg-4 mt-5" key={constructor.$.constructorId}>
                             <div className="constructorCard card h-100" >
-                                <img id={constructor.$.constructorId + "img"} className="card-img-top mx-auto my-auto" src={"/Assets/constructorsImages/" + constructor.Name + "_lg.png"} alt="" />
+                                <img id={constructor.$.constructorId + "img"} className="card-img-top mx-auto my-auto h-100" src={"/Assets/constructorsImages/" + constructor.Name + "_lg.png"} alt="" />
                                 <div className="card-body">
                                     <a href={constructor.$.url}><h5 className="card-title">{constructor.Name}</h5></a>
 

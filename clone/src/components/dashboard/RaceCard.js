@@ -3,8 +3,8 @@ var countryJSON = require('../../JSON/country-nationality.json');
 const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_third }) => {
     if (round < 1) {
         return (
-            <div className="card race h-100">
-                <h2>Loading..</h2>
+            <div className="small mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
             </div>
         )
     }
@@ -32,8 +32,8 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
 const NextRace = ({ round, circuit, race }) => {
     if (round < 1) {
         return (
-            <div className="card race h-100">
-                <h2>Loading..</h2>
+            <div className="small mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
             </div>
         )
     }
@@ -58,7 +58,9 @@ const NextRace = ({ round, circuit, race }) => {
 const DriversList = ({ driversList }) => {
     if (driversList.length === 0) {
         return (
-            <div><h2>Loading...</h2></div>
+            <div className="small mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
+            </div>
         )
     }
     return (
@@ -84,7 +86,7 @@ const DriversList = ({ driversList }) => {
                         <div className="number">{driver.Driver[0].PermanentNumber}</div>
                         <div className="name">{driver.Driver[0].GivenName + " " + driver.Driver[0].FamilyName}</div>
                         <div className="points">{driver.$.points}</div>
-                        <div className="CCflag" ><img id={driver.$.position + "imageD"} src="./logo512.png" alt="flag" /></div>
+                        <div className="CCflag" ><img id={driver.$.position + "imageD"} src="/Assets/img/preloader-small.gif" alt="flag" /></div>
                         {setTimeout(function () { flag(); return null }, 500)}
                     </div>
                 )
@@ -95,7 +97,9 @@ const DriversList = ({ driversList }) => {
 const ConstructorsList = ({ constructorsList, }) => {
     if (constructorsList.length === 0) {
         return (
-            <div><h2>Loading...</h2></div>
+            <div className="small mx-auto">
+                <img className="preloader" src="/Assets/img/preloader.gif" alt="preloader" />
+            </div>
         )
     }
     return (
@@ -117,7 +121,7 @@ const ConstructorsList = ({ constructorsList, }) => {
                             {constructor.$.position}
                         </div>
                         <div className="number">{constructor.$.wins}</div>
-                        <div className="CCflag" ><img id={constructor.$.position + "image"} src="./logo512.png" alt="flag" /></div>
+                        <div className="CCflag" ><img id={constructor.$.position + "image"} src="/Assets/img/preloader-small.gif" alt="flag" /></div>
                         <div className="name">{constructor.Constructor[0].Name}</div>
 
                         <div className="points">{constructor.$.points}</div>

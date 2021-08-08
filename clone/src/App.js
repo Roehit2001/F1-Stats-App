@@ -23,7 +23,9 @@ function App() {
           <Route path="/constructors" component={Constructors} />
           <Route path="/results/:year/:round/:totalRound" component={Results} />
         </Switch>
+        <img id="bottomImg" src="/Assets/img/car.png" alt="car" />
         <Footer />
+        <div id="bottom"></div>
       </div>
     </BrowserRouter>
   );
