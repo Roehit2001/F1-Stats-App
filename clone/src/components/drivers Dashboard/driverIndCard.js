@@ -6,7 +6,6 @@ const DriverIndCard = ({ driversList }) => {
             </div>
         )
     }
-    console.log(driversList)
     return (
         <div className="card-deck">
             {

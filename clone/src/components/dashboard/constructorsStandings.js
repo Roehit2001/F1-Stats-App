@@ -11,9 +11,9 @@ function ConstructorsStandings() {
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        console.log('call DS', result)
+
                         setConstructorsStandings(result)
-                        console.log(constructorsStandings)
+
                     })
                 })
                 .catch(err => console.log(err));

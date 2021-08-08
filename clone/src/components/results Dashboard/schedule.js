@@ -3,10 +3,8 @@ import YearTableCard from './yearTable';
 var parseString = require('xml2js').parseString;
 
 function Schedule(schedule) {
-    console.log(schedule.schedule)
     const url = "https://ergast.com/api/f1/" + schedule.schedule
     const [selectedSchedule, setSelectedSchedule] = useState([]);
-
     useEffect(() => {
         async function apicall() {
             await fetch(url)
@@ -14,7 +12,6 @@ function Schedule(schedule) {
                 .then(data => {
                     parseString(data, function (err, result) {
                         setSelectedSchedule(result);
-                        console.log(err)
                     })
                 })
                 .catch(err => console.log(err));

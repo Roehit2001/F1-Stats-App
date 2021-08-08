@@ -11,9 +11,7 @@ function DriversStandings() {
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        console.log('call DS', result)
                         setDriverStandings(result)
-                        console.log(driverStandings)
                     })
                 })
                 .catch(err => console.log(err));

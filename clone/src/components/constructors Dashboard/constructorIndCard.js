@@ -6,7 +6,7 @@ const ConstructorIndCard = ({ constructorsList }) => {
             </div>
         )
     }
-    console.log(constructorsList)
+
 
     return (
         <div className="card-deck">

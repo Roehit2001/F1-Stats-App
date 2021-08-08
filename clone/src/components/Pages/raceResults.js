@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Schedule from '../results Dashboard/schedule';
 
 function RaceResults() {
     const currentYear = new Date().getFullYear();
     const [year, setYear] = useState(currentYear);
-    const [round, setRound] = useState(0);
 
     function handleChange(e) {
         setYear(e.target.value);
@@ -33,7 +32,6 @@ function RaceResults() {
                     <option value={currentYear - 10} >{currentYear - 10}</option>
                     <option value={currentYear - 11} >{currentYear - 11}</option>
                 </select>
-                {/* <button type="submit" value="submit">Search</button> */}
             </form>
             <Schedule schedule={year} />
         </div>

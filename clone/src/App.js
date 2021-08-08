@@ -7,7 +7,7 @@ import Constructors from './components/Pages/constructors';
 import Home from './components/Pages/home';
 import Footer from './components/layout/footer';
 import RaceResults from './components/Pages/raceResults';
-
+import Results from './components/results Dashboard/results';
 
 function App() {
   return (
@@ -16,10 +16,12 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route path="/circuits" component={Circuits} />
           <Route path="/drivers" component={Drivers} />
           <Route path="/race_results" component={RaceResults} />
           <Route path="/constructors" component={Constructors} />
+          <Route path="/results/:year/:round/:totalRound" component={Results} />
         </Switch>
         <Footer />
       </div>

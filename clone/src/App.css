@@ -1,4 +1,69 @@
+body{
+  background-color: #111213ff;
+  color: #fff;
+}
+/* Footer CSS */
+#footer{
+  display: flex; 
+flex-flow: column no-wrap; 
+justify-content: space-between;
+}
+footer {
+  background-color: 	#111213ff;
+  color: #dc3545;
+  width: 100%;
+  padding: 2.5%;
+  align-self: flex-end;
+  padding-bottom: 0.5%;
+  border-top: double;
+  border-color: #e10600;
+}
+footer a{
+  border: none;
+  /* background-color: #fff; */
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 10%;
+  padding: 1%;
+  margin: 2.5%;
+  border-color: #fff;
+  font-size: 25px;
+}
+footer a:hover{
+  border: none;
+  background-color: transparent;
+  color: #dc3545;
+}
+footer h5{
+  font-size: 1.25rem;
+}
+footer p{
+  font-size: 1rem;
+}
+/* Navbar CSS */
+nav{
+  background-color: #111213ff;
+  
+  border-bottom: double #e10600;
+}
+.nav-item button{
+  background: transparent;
+  color: #dc3545;
+  border-style: ridge;
+  border-color: #dc3545;
+}
+.nav-item button:hover{
+  border-style: dotted;
+  box-shadow: inset 2.5px 2.5px #dc3545 ;
+}
+.nav-item .active button{
 
+box-shadow: -5px 5px #dc3545 ;
+}
+.navbar-brand img{
+  width: 6%;
+}
 .race{
   border: none;
   box-shadow: 3px 3px 10px #e10600;
@@ -10,44 +75,6 @@
   height: 2.5vw;
   border-radius: 50%;
   border: solid red;
-}
-#footer{
-  display: flex; 
-flex-flow: column no-wrap; 
-justify-content: space-between;
-}
-footer {
-  background-color: #e10600;
-  color: #fff;
-  /* position:absolute;
-  bottom: 0; */
-  width: 100%;
-  padding: 2.5%;
-
-  align-self: flex-end;
-}
-footer a{
-  border: solid;
-  background-color: #fff;
-  color: #e10600;
-  border-radius: 50%;
-  padding: 1%;
-  margin: 2.5%;
-  border-color: #fff;
-  font-size: large;
-}
-footer a:hover{
-  border: solid;
-  background-color: #e10600;
-  color: #fff;
-  
- 
-}
-footer h5{
-  font-size: 1.25rem;
-}
-footer p{
-  font-size: 1rem;
 }
 #home{
   padding-top: 5%;

@@ -1,7 +1,7 @@
 
 const Countdown = () => {
     return (
-        <div><p>hi</p></div>
+        <div><p></p></div>
     )
 }
 

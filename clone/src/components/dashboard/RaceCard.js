@@ -56,7 +56,6 @@ const NextRace = ({ round, circuit, race }) => {
 }
 
 const DriversList = ({ driversList }) => {
-    console.log(driversList)
     if (driversList.length === 0) {
         return (
             <div><h2>Loading...</h2></div>
@@ -68,11 +67,10 @@ const DriversList = ({ driversList }) => {
 
             driversList.MRData.StandingsTable[0].StandingsList[0].DriverStanding.map(driver => {
                 function flag() {
-                    console.log("called")
+
                     for (var i = 0; i < countryJSON.length; i++) {
                         if (countryJSON[i].nationality.includes(driver.Driver[0].Nationality)) {
                             const CC = countryJSON[i].alpha_2_code;
-                            console.log(CC, driver.Driver[0].Nationality)
                             document.getElementById(driver.$.position + "imageD").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
                         }
                     }
@@ -95,7 +93,6 @@ const DriversList = ({ driversList }) => {
     )
 }
 const ConstructorsList = ({ constructorsList, }) => {
-    console.log(constructorsList)
     if (constructorsList.length === 0) {
         return (
             <div><h2>Loading...</h2></div>
@@ -106,11 +103,9 @@ const ConstructorsList = ({ constructorsList, }) => {
         <div className="cardsect">{
             constructorsList.MRData.StandingsTable[0].StandingsList[0].ConstructorStanding.map(constructor => {
                 function flag() {
-                    console.log("called")
                     for (var i = 0; i < countryJSON.length; i++) {
                         if (countryJSON[i].nationality.includes(constructor.Constructor[0].Nationality)) {
                             const CC = countryJSON[i].alpha_2_code;
-                            console.log(CC, constructor.Constructor[0].Nationality)
                             document.getElementById(constructor.$.position + "image").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
                         }
                     }
