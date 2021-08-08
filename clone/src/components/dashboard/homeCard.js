@@ -90,7 +90,7 @@ function HomeCard() {
 
     return (
         <div className="row">
-            <div className="container">
+            <div className="container-cust">
                 <div className="card-deck">
                     <div className="col-lg-4" id="previous_card">
                         <RaceCard round={roundPrevious} circuit_name={circuitPrevious} driver_first={firstPrevious} driver_second={secondPrevious} driver_third={thirdPrevious} />

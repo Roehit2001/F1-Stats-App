@@ -181,14 +181,49 @@ box-shadow: 5px -5px #e10600;
 .race{
   border: none;
   box-shadow: 3px 3px 10px #e10600;
-
+  background-color: transparent;
+  padding: 5%;
 }
 .race .race_number {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 2.5vw;
   height: 2.5vw;
+  padding: 1%;
   border-radius: 50%;
   border: solid red;
+}
+.race .card-img-top{
+  width: 80%;
+  margin-left: 10%;
+}
+.race .card-img-overlay{
+  position: absolute;
+  margin-top: 50%;
+  text-align: center;
+  color: #e10600;
+}
+.race .first{
+  width: 100%;
+  text-align: center;
+  border: solid;
+  border-color: #e10600;
+  height: 50%;
+
+}
+.race .second , .race .third{
+  display: inline-block;
+  text-align: center;
+  border: solid;
+  border-color: #e10600;
+  width: 50%;
+  height: 50%;
+  vertical-align: middle;
+}
+.position{
+  padding-top: 10px;
+  width: 50px;
 }
 #home{
   padding-top: 5%;

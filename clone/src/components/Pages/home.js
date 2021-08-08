@@ -7,7 +7,7 @@ function Home() {
         <div id="home">
             <HomeCard />
             <div className="row">
-                <div className="container">
+                <div className="container-cust">
                     <div className="half-cont col-lg-6">
                         <DriversStandings />
                     </div>

@@ -9,20 +9,20 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
         )
     }
     return (
-        <div id="PreviousRace" className="card race h-100">
+        <div className="card race h-100">
             <div className="race_number">
                 <p>{round}</p>
             </div>
-            <div className="card-img-top">
-                <img id="prev-card-img" src={"/Assets/circuitLayouts/" + circuit_name + ".png"} alt="" />
+            <div className="card-img-top mx-auto">
+                <img id="card-img" src={"/Assets/circuitLayouts/" + circuit_name + ".png"} alt="" />
             </div>
             <div className="card-img-overlay">
                 <h3>{circuit_name}</h3>
             </div>
-            <div className="card-body">
-                <div className="first card-text"><p>{driver_first}</p></div>
-                <div className="Second card-text"><p>{driver_second}</p></div>
-                <div className="Third card-text"><p>{driver_third}</p></div>
+            <div className="card-body pt-5">
+                <div className="first card-text"><img className="position" src="/Assets/img/first.png" alt="first" /><p>{driver_first}</p></div>
+                <div className="second card-text"><img className="position" src="/Assets/img/second.png" alt="second" /><p>{driver_second}</p></div>
+                <div className="third card-text"><img className="position" src="/Assets/img/third.png" alt="third" /><p>{driver_third}</p></div>
             </div>
         </div>
     )
