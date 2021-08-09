@@ -1,4 +1,5 @@
 var countryJSON = require('../../JSON/country-nationality.json');
+const { default: Countdown } = require('./countdown');
 
 const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_third }) => {
     if (round < 1) {
@@ -11,15 +12,14 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
     return (
         <div className="card race h-100">
             <div className="race_number">
-                <p>{round}</p>
+                <p>Round: {round}</p>
             </div>
-            <div className="card-img-top mx-auto">
+            <div className="card-img-top mx-auto h-100">
                 <img id="card-img" src={"/Assets/circuitLayouts/" + circuit_name + ".png"} alt="" />
             </div>
-            <div className="card-img-overlay">
-                <h3>{circuit_name}</h3>
-            </div>
-            <div className="card-body pt-5">
+
+            <div className="card-body pt-1 text-center">
+                <h3 className="card-title">{circuit_name}</h3>
                 <div className="first card-text"><img className="position" src="/Assets/img/first.png" alt="first" /><p>{driver_first}</p></div>
                 <div className="second card-text"><img className="position" src="/Assets/img/second.png" alt="second" /><p>{driver_second}</p></div>
                 <div className="third card-text"><img className="position" src="/Assets/img/third.png" alt="third" /><p>{driver_third}</p></div>
@@ -29,7 +29,7 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
 
 }
 
-const NextRace = ({ round, circuit, race }) => {
+const NextRace = ({ round, circuit, race, date }) => {
     if (round < 1) {
         return (
             <div className="small mx-auto">
@@ -40,15 +40,16 @@ const NextRace = ({ round, circuit, race }) => {
     return (
         <div className="card race h-100">
             <div className="race_number">
-                <p>{round}</p>
+                <p>Round: {round}</p>
             </div>
-            <div className="card-img-top">
-                <img src={"/Assets/circuitLayouts/" + circuit + ".png"} alt="" />
+            <div className="card-img-top mx-auto ">
+                <img id="card-img-NEXT" src={"/Assets/circuitLayouts/" + circuit + ".png"} alt="" />
             </div>
-            <div className="card-img-overlay">
-                <h2>{race}</h2>
-                <h3>{circuit}</h3>
+            <div className="card-body pt-5 text-center">
+                <h2 className="card-title">{race}</h2>
+                <h4 className="card-text">{circuit}</h4>
             </div>
+            <Countdown date={date} />
         </div>
     )
 
@@ -65,32 +66,43 @@ const DriversList = ({ driversList }) => {
     }
     return (
         // console.log('step')
-        <div className="cardsect">{
+        <div className="cardsect">
+            <table id="DriversStandings_Table" className="home_Table table table-sm">
+                <thead>
+                    <tr className="">
+                        <th scope="col">Position</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        <th scope="col">Points</th>
+                    </tr>
+                </thead>
+                <tbody >{
+                    driversList.MRData.StandingsTable[0].StandingsList[0].DriverStanding.map(driver => {
+                        function flag() {
 
-            driversList.MRData.StandingsTable[0].StandingsList[0].DriverStanding.map(driver => {
-                function flag() {
-
-                    for (var i = 0; i < countryJSON.length; i++) {
-                        if (countryJSON[i].nationality.includes(driver.Driver[0].Nationality)) {
-                            const CC = countryJSON[i].alpha_2_code;
-                            document.getElementById(driver.$.position + "imageD").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                            for (var i = 0; i < countryJSON.length; i++) {
+                                if (countryJSON[i].nationality.includes(driver.Driver[0].Nationality)) {
+                                    const CC = countryJSON[i].alpha_2_code;
+                                    document.getElementById(driver.$.position + "imageD").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                                }
+                            }
+                            return null;
                         }
-                    }
-                    return null;
-                }
-                return (
-                    <div key={driver.$.position} className="indCard">
-                        <div className="position">
-                            {driver.$.position}
-                        </div>
-                        <div className="number">{driver.Driver[0].PermanentNumber}</div>
-                        <div className="name">{driver.Driver[0].GivenName + " " + driver.Driver[0].FamilyName}</div>
-                        <div className="points">{driver.$.points}</div>
-                        <div className="CCflag" ><img id={driver.$.position + "imageD"} src="/Assets/img/preloader-small.gif" alt="flag" /></div>
-                        {setTimeout(function () { flag(); return null }, 500)}
-                    </div>
-                )
-            })}
+                        return (
+                            <tr key={driver.$.position}>
+                                <td className="positionTable">
+                                    {driver.$.position}
+                                </td>
+                                <td className="number">{driver.Driver[0].PermanentNumber}</td>
+                                <td className="name">{driver.Driver[0].GivenName + " " + driver.Driver[0].FamilyName}</td>
+                                <td className="CCflag" ><img id={driver.$.position + "imageD"} src="/Assets/img/preloader-small.gif" alt="flag" /></td>
+                                <td className="points">{driver.$.points}</td>
+                                {setTimeout(function () { flag(); return null }, 500)}
+                            </tr>
+                        )
+                    })}</tbody>
+            </table>
         </div>
     )
 }
@@ -104,31 +116,43 @@ const ConstructorsList = ({ constructorsList, }) => {
     }
     return (
         // console.log('step')
-        <div className="cardsect">{
-            constructorsList.MRData.StandingsTable[0].StandingsList[0].ConstructorStanding.map(constructor => {
-                function flag() {
-                    for (var i = 0; i < countryJSON.length; i++) {
-                        if (countryJSON[i].nationality.includes(constructor.Constructor[0].Nationality)) {
-                            const CC = countryJSON[i].alpha_2_code;
-                            document.getElementById(constructor.$.position + "image").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+        <div className="cardsect">
+            <table id="DriversStandings_Table" className="home_Table table table-sm">
+                <thead>
+                    <tr className="">
+                        <th scope="col">Position</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        <th scope="col">Wins</th>
+                        <th scope="col">Points</th>
+                    </tr>
+                </thead>
+                <tbody >{
+                    constructorsList.MRData.StandingsTable[0].StandingsList[0].ConstructorStanding.map(constructor => {
+                        function flag() {
+                            for (var i = 0; i < countryJSON.length; i++) {
+                                if (countryJSON[i].nationality.includes(constructor.Constructor[0].Nationality)) {
+                                    const CC = countryJSON[i].alpha_2_code;
+                                    document.getElementById(constructor.$.position + "image").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                                }
+                            }
+                            return null;
                         }
-                    }
-                    return null;
-                }
-                return (
-                    <div key={constructor.$.position} className="indCard">
-                        <div className="position">
-                            {constructor.$.position}
-                        </div>
-                        <div className="number">{constructor.$.wins}</div>
-                        <div className="CCflag" ><img id={constructor.$.position + "image"} src="/Assets/img/preloader-small.gif" alt="flag" /></div>
-                        <div className="name">{constructor.Constructor[0].Name}</div>
+                        return (
+                            <tr key={constructor.$.position} className="indCard">
+                                <td className="positionTable">
+                                    {constructor.$.position}
+                                </td><td className="name">{constructor.Constructor[0].Name}</td>
 
-                        <div className="points">{constructor.$.points}</div>
-                        {setTimeout(function () { flag(); return null }, 500)}
-                    </div>
-                )
-            })}
+                                <td className="CCflag" ><img id={constructor.$.position + "image"} src="/Assets/img/preloader-small.gif" alt="flag" /></td>
+
+                                <td className="number">{constructor.$.wins}</td>
+                                <td className="points">{constructor.$.points}</td>
+                                {setTimeout(function () { flag(); return null }, 500)}
+                            </tr>
+                        )
+                    })}</tbody>
+            </table>
         </div>
     )
 }

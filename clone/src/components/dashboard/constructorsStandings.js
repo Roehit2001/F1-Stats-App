@@ -29,7 +29,7 @@ function ConstructorsStandings() {
         <div className="row pointsTable">
             <div className="container">
                 <div className="card_cust h-100">
-                    <div className="col-12">
+                    <div className="col-12 text-center">
                         <h2>Constructors Standings</h2>
                     </div>
                     <ConstructorsList constructorsList={constructorsStandings} />

@@ -18,7 +18,7 @@ function HomeCard() {
     const [secondPrevious, setSecondPrevious] = useState('');
     const [thirdCurrent, setThirdCurrent] = useState('');
     const [thirdPrevious, setThirdPrevious] = useState('');
-
+    const [raceDateNext, setRaceDateNext] = useState('');
 
     useEffect(() => {
         async function apicall1() {
@@ -76,10 +76,11 @@ function HomeCard() {
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        // console.log(result);
+                        console.log(result);
                         // console.log('call 3')
                         setCircuitNext(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNameNext(result.MRData.RaceTable[0].Race[0].RaceName)
+                        setRaceDateNext(result.MRData.RaceTable[0].Race[0].Date);
                     })
                 })
                 .catch(err => console.log(err));
@@ -99,7 +100,7 @@ function HomeCard() {
                         <RaceCard round={roundCurrent} circuit_name={circuitCurrent} driver_first={firstCurrent} driver_second={secondCurrent} driver_third={thirdCurrent} />
                     </div>
                     <div className="col-lg-4" id="next_card">
-                        <NextRace round={roundNext} circuit={circuitNext} race={raceNameNext} />
+                        <NextRace round={roundNext} circuit={circuitNext} race={raceNameNext} date={raceDateNext} />
                     </div>
                 </div>
             </div>

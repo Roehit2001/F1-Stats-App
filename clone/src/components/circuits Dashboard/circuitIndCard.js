@@ -35,7 +35,7 @@ const CircuitIndCard = ({ circuitsList }) => {
                     return (
                         <div className="col-lg-4 mt-5" key={circuit.$.circuitId}>
                             <div className="circuitCard card h-100" >
-                                <img id={circuit.$.circuitId + "img"} className="card-img-top mx-auto" src="/Assets/img/preloader.gif" alt="" />
+                                <img id={circuit.$.circuitId + "img"} className="card-img-top mx-auto" src="/Assets/img/preloader-small.gif" alt="" />
                                 <div className="card-body">
                                     <img className="layout" src={"/Assets/circuitLayouts/" + circuit.CircuitName + ".png"} alt="here" />
                                     <a href={circuit.$.url}><h5 className="card-title">{circuit.CircuitName}</h5></a>

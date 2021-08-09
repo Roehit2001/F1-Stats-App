@@ -1,6 +1,7 @@
 body{
-  background-color: #111213ff;
+  background-color: #111213;
   color: #fff;
+  overflow-x: hidden;
 }
 #bottomImg{
 width: 50%;
@@ -188,29 +189,32 @@ box-shadow: 5px -5px #e10600;
   position: absolute;
   top: 0;
   left: 0;
-  width: 2.5vw;
+  /* width: 2.5vw; */
   height: 2.5vw;
-  padding: 1%;
-  border-radius: 50%;
-  border: solid red;
+  padding: 2%;
+  border-radius: 0 10px 10px 0px;
+  border: solid #e10600;
+  border-left: none;
+  border-top: none;
 }
 .race .card-img-top{
   width: 80%;
   margin-left: 10%;
 }
-.race .card-img-overlay{
-  position: absolute;
-  margin-top: 50%;
+.race .card-title{
+  
   text-align: center;
   color: #e10600;
 }
+
 .race .first{
   width: 100%;
   text-align: center;
   border: solid;
   border-color: #e10600;
-  height: 50%;
-
+  height: 40%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.5rem
 }
 .race .second , .race .third{
   display: inline-block;
@@ -218,8 +222,33 @@ box-shadow: 5px -5px #e10600;
   border: solid;
   border-color: #e10600;
   width: 50%;
-  height: 50%;
+  height: 40%;
   vertical-align: middle;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.25rem
+}
+#card-img-NEXT{
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.countdownCard{
+  background-color: transparent;
+  width: 100%;
+  border: solid;
+  border-color: #e10600;
+  margin-right: 0 !important;
+  margin-left: 0% !important;
+  
+}
+.countdownCard .card-body{
+  padding: 0.25rem !important;
+  vertical-align: middle;
+}
+.countdownCard span{
+  color:#fff;
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;padding-right: 5%;
 }
 .position{
   padding-top: 10px;
@@ -231,28 +260,43 @@ box-shadow: 5px -5px #e10600;
   margin-bottom: 5%;
   min-height: 100vh;
 }
-.indCard{
-  width: 100%;
-  height: fit-content;
-  /* display: inline; */
-}
-.indCard .position{
-  width: 10%;display: inline-block;
-}
-.indCard .number{
-  width: 10%;display: inline-block;
-}
-.indCard .name{
-  width: 65%;display: inline-block;
-}
-.indCard .points{
-  width: 15%;display: inline-block;
-}
-.pointsTable{
-  margin-bottom: 10%;
-}
+
 .half-cont{
   display: inline-block;
+}
+.home_Table tr{
+  color: #111213ff;
+}
+.home_Table td {
+  color: #fff;
+}
+.pointsTable h2{
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 2.5%;
+}
+.positionTable, .number, .points, .CCflag{text-align: center;}
+.home_Table thead th{
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  color: #e10600;
+  border-bottom: double ;
+  border-color: #e10600;
+  font-size: 1.25rem;
+}
+ .home_Table td, .home_Table th {
+   vertical-align: middle;
+   align-items: center;
+  border-style: double;
+  border-color: #e10600;
+}
+.number, .points{
+  font-family: 'Pacifico', cursive;
+  font-size: 1.75rem;
+  text-shadow: 5px 5px 0px #e10600;
+}
+.name{
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.15rem;
 }
 /* Results CSS */
 #raceResults select{

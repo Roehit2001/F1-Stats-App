@@ -27,7 +27,7 @@ function DriversStandings() {
         <div className="row pointsTable">
             <div className="container">
                 <div className="card_cust h-100">
-                    <div className="col-12">
+                    <div className="col-12 text-center">
                         <h2>Drivers Standings</h2>
                     </div>
                     <DriversList driversList={driverStandings} />

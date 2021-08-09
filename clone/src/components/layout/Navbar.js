@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
-import Countdown from '../dashboard/countdown'
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg">
@@ -28,7 +27,6 @@ function Navbar() {
                 </ul>
 
             </div>
-            <Countdown />
         </nav>
     )
 }
