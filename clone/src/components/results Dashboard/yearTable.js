@@ -8,11 +8,11 @@ const YearTableCard = ({ yearData }) => {
             </div>
         )
     }
-    const d1 = new Date;
+    const d1 = new Date();
     const totalRound = yearData.MRData.RaceTable[0].Race.length;
     const TodayDate = moment(d1).format('DD MMM YY')
     return (
-        <div className="col-12 mt-5">
+        <div className="col-12 mt-5 table-responsive">
             <table id="yearTable_Table" className="table table-hover  ">
                 <thead>
                     <tr className="">
@@ -54,7 +54,7 @@ const YearTableCard = ({ yearData }) => {
                                     </tr>
                                 )
                             }
-
+                            return null;
                         })
                     }
                 </tbody>

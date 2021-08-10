@@ -76,7 +76,7 @@ function HomeCard() {
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        console.log(result);
+                        // console.log(result);
                         // console.log('call 3')
                         setCircuitNext(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNameNext(result.MRData.RaceTable[0].Race[0].RaceName)
@@ -94,10 +94,10 @@ function HomeCard() {
             <div className="container-cust">
                 <div className="card-deck">
                     <div className="col-lg-4" id="previous_card">
-                        <RaceCard round={roundPrevious} circuit_name={circuitPrevious} driver_first={firstPrevious} driver_second={secondPrevious} driver_third={thirdPrevious} />
+                        <RaceCard round={roundPrevious} race_name={raceNamePrevious} circuit_name={circuitPrevious} driver_first={firstPrevious} driver_second={secondPrevious} driver_third={thirdPrevious} />
                     </div>
                     <div className="col-lg-4" id="current_card">
-                        <RaceCard round={roundCurrent} circuit_name={circuitCurrent} driver_first={firstCurrent} driver_second={secondCurrent} driver_third={thirdCurrent} />
+                        <RaceCard round={roundCurrent} race_name={raceNameCurrent} circuit_name={circuitCurrent} driver_first={firstCurrent} driver_second={secondCurrent} driver_third={thirdCurrent} />
                     </div>
                     <div className="col-lg-4" id="next_card">
                         <NextRace round={roundNext} circuit={circuitNext} race={raceNameNext} date={raceDateNext} />

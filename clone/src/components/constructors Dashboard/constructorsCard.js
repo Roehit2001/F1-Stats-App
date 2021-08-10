@@ -14,7 +14,7 @@ function ConstructorsCard() {
                 .then(data => {
                     parseString(data, function (err, result) {
                         setConstructorsData(result);
-                        console.log(result)
+                        // console.log(result)
                     })
 
                 })

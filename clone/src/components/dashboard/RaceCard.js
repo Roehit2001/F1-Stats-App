@@ -1,7 +1,7 @@
 var countryJSON = require('../../JSON/country-nationality.json');
 const { default: Countdown } = require('./countdown');
 
-const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_third }) => {
+const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_third, race_name }) => {
     if (round < 1) {
         return (
             <div className="small mx-auto">
@@ -14,12 +14,13 @@ const RaceCard = ({ round, circuit_name, driver_first, driver_second, driver_thi
             <div className="race_number">
                 <p>Round: {round}</p>
             </div>
-            <div className="card-img-top mx-auto h-100">
+            <div className="card-img-top mx-md-auto h-md-100">
                 <img id="card-img" src={"/Assets/circuitLayouts/" + circuit_name + ".png"} alt="" />
             </div>
 
             <div className="card-body pt-1 text-center">
                 <h3 className="card-title">{circuit_name}</h3>
+                <h4>{race_name}</h4>
                 <div className="first card-text"><img className="position" src="/Assets/img/first.png" alt="first" /><p>{driver_first}</p></div>
                 <div className="second card-text"><img className="position" src="/Assets/img/second.png" alt="second" /><p>{driver_second}</p></div>
                 <div className="third card-text"><img className="position" src="/Assets/img/third.png" alt="third" /><p>{driver_third}</p></div>
@@ -65,8 +66,7 @@ const DriversList = ({ driversList }) => {
         )
     }
     return (
-        // console.log('step')
-        <div className="cardsect">
+        <div className="cardsect table-responsive">
             <table id="DriversStandings_Table" className="home_Table table table-sm">
                 <thead>
                     <tr className="">
@@ -91,19 +91,17 @@ const DriversList = ({ driversList }) => {
                         }
                         return (
                             <tr key={driver.$.position}>
-                                <td className="positionTable">
-                                    {driver.$.position}
-                                </td>
+                                <td className="positionTable">{driver.$.position}</td>
                                 <td className="number">{driver.Driver[0].PermanentNumber}</td>
                                 <td className="name">{driver.Driver[0].GivenName + " " + driver.Driver[0].FamilyName}</td>
                                 <td className="CCflag" ><img id={driver.$.position + "imageD"} src="/Assets/img/preloader-small.gif" alt="flag" /></td>
                                 <td className="points">{driver.$.points}</td>
-                                {setTimeout(function () { flag(); return null }, 500)}
+                                <td className="d-none">{setTimeout(function () { flag(); return null }, 500)}</td>
                             </tr>
                         )
                     })}</tbody>
             </table>
-        </div>
+        </div >
     )
 }
 const ConstructorsList = ({ constructorsList, }) => {
@@ -116,10 +114,10 @@ const ConstructorsList = ({ constructorsList, }) => {
     }
     return (
         // console.log('step')
-        <div className="cardsect">
-            <table id="DriversStandings_Table" className="home_Table table table-sm">
+        <div className="cardsect table-responsive">
+            <table id="ConstructorsStandings_Table" className="home_Table table table-sm">
                 <thead>
-                    <tr className="">
+                    <tr>
                         <th scope="col">Position</th>
                         <th scope="col">Name</th>
                         <th scope="col">Nationality</th>
@@ -140,17 +138,14 @@ const ConstructorsList = ({ constructorsList, }) => {
                         }
                         return (
                             <tr key={constructor.$.position} className="indCard">
-                                <td className="positionTable">
-                                    {constructor.$.position}
-                                </td><td className="name">{constructor.Constructor[0].Name}</td>
-
-                                <td className="CCflag" ><img id={constructor.$.position + "image"} src="/Assets/img/preloader-small.gif" alt="flag" /></td>
-
+                                <td className="positionTable">{constructor.$.position}</td>
+                                <td className="name">{constructor.Constructor[0].Name}</td>
+                                <td className="CCflag"><img id={constructor.$.position + "image"} src="/Assets/img/preloader-small.gif" alt="flag" /></td>
                                 <td className="number">{constructor.$.wins}</td>
                                 <td className="points">{constructor.$.points}</td>
-                                {setTimeout(function () { flag(); return null }, 500)}
-                            </tr>
+                                <td className="d-none">{setTimeout(function () { flag(); return null }, 500)}</td></tr>
                         )
+
                     })}</tbody>
             </table>
         </div>

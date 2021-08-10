@@ -14,7 +14,7 @@ function DriversCard() {
                 .then(data => {
                     parseString(data, function (err, result) {
                         setDriversData(result);
-                        console.log(result)
+                        // console.log(result)
                     })
 
                 })

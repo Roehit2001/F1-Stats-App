@@ -71,6 +71,11 @@ box-shadow: -5px 5px #dc3545 ;
 }
 .navbar-brand img{
   width: 6%;
+  
+}
+.navbar-toggler img{
+  width: 10%;
+  display: inline;
 }
 /* preloader css */
 .preloader{
@@ -116,6 +121,9 @@ box-shadow: 5px -5px #e10600;
 border-style: groove;
 border-color: #e10600;
 box-shadow: 5px -5px #e10600;
+}
+#circuitCard h1{
+  color: #fff;
 }
 .constructorCard a:hover{
   text-decoration: underline;
@@ -369,4 +377,77 @@ box-shadow: 5px -5px #e10600;
 }
 .resultsTab h5{
   margin-bottom: 2.5%;
+}
+.perNum {
+  float: right;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  .navbar-brand{
+    display: inline;
+    width: 17.5%;
+  }
+  .navbar-brand img{
+    width:100%;
+  }
+  .navbar-toggler{
+    float: right;
+    display: inline;
+    width: 15%;
+  }
+  .navbar-toggler img{
+    width: 100%;
+  }
+  .race .card-img-top{
+    width: 50%;
+    margin-left: 25%;
+  }
+  .race .card-img-top img{
+    width: 100%;
+  }
+  .race .race_number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 2.5vw; */
+    height: 5vh;
+    padding: 2%;
+    border-radius: 0 10px 10px 0px;
+    border: solid #e10600;
+    border-left: none;
+    border-top: none;
+}
+.position{
+  width: 35px;
+}
+.race .second, .race .third {
+  display: inline-block;
+  width: 100%;
+  height: 40%;
+  font-size: 1.25rem;
+}
+#previous_card , #current_card{
+  margin-bottom: 5%;
+}
+#driverCard .card-deck , #constructorCard .card-deck, #circuitCard .card-deck {
+  width: 80%;
+  margin-left: 10%;
+}
+#bottomImg{
+  display: none;
+}
+#raceResults select {
+  width: 50%;
+  text-align: center;
+  height: 5vh;
+  font-size: 3vh;
+  margin-left:25%;
+  background-color: transparent;
+  border-color: #e10600;
+  color: #fff;
+}
+.header-year{
+  display: inline;
+}
 }

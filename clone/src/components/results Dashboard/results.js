@@ -9,11 +9,8 @@ function Results() {
     const [raceResults, setRaceResults] = useState([]);
     const { year, round, totalRound } = useParams();
 
-
-
     useEffect(() => {
         const url = "http://ergast.com/api/f1/" + year + "/" + round + "/results";
-
         async function apicall() {
             await fetch(url)
                 .then(res => res.text())
@@ -25,8 +22,7 @@ function Results() {
                 .catch(err => console.log(err));
         }
         apicall()
-
-    }, [round])
+    }, [year, round])
 
     if (+round === 1) {
         return (
