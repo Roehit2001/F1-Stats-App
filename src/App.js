@@ -10,6 +10,21 @@ import RaceResults from './components/Pages/raceResults';
 import Results from './components/results Dashboard/results';
 
 function App() {
+  var d = new Date();
+  var date = d.getDate();
+  var day = d.getDay();
+  if (day === 1 && +localStorage.date !== date) {
+    localStorage.clear();
+    localStorage.setItem("date", date);
+    console.log("its monday Date is reset");
+  }
+  else if (+localStorage.date !== date && day !== 1) {
+    localStorage.setItem("date", date);
+    console.log("not monday, date is reset", localStorage.getItem("date"))
+  }
+  else {
+    console.log("local Storage up to date")
+  }
   return (
     <BrowserRouter>
       <div className="App">
