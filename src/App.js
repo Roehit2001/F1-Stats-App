@@ -13,17 +13,20 @@ function App() {
   var d = new Date();
   var date = d.getDate();
   var day = d.getDay();
-  if (day === 1 && +localStorage.date !== date) {
+  var month = d.getMonth();
+  if (day === 1 && +localStorage.date !== date && +localStorage.month !== month) {
     localStorage.clear();
     localStorage.setItem("date", date);
+    localStorage.setItem("month", month);
     console.log("its monday Date is reset");
   }
-  else if (+localStorage.date !== date && day !== 1) {
+  else if (day !== 1 && (+localStorage.date !== date || +localStorage.month !== month)) {
     localStorage.setItem("date", date);
-    console.log("not monday, date is reset", localStorage.getItem("date"))
+    localStorage.setItem("month", month);
+    console.log("not monday, date is reset", +localStorage.getItem("date"), +localStorage.getItem("month") + 1)
   }
   else {
-    console.log("local Storage up to date")
+    console.log("local Storage up to date", +localStorage.getItem("date"), +localStorage.getItem("month") + 1)
   }
   return (
     <BrowserRouter>
