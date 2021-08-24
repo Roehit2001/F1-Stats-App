@@ -1,5 +1,4 @@
 import './App.css';
-import { useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Circuits from './components/Pages/circuits';
@@ -9,12 +8,9 @@ import Home from './components/Pages/home';
 import Footer from './components/layout/footer';
 import RaceResults from './components/Pages/raceResults';
 import Results from './components/results Dashboard/results';
-import ReactGA from 'react-ga';
-// ReactGA.initialize('G-VMTE6JWZQ2');
+
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  })
+
   var d = new Date();
   var date = d.getDate();
   var day = d.getDay();
