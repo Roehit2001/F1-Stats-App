@@ -20,7 +20,7 @@ const CircuitIndCard = ({ circuitsList }) => {
                         for (var i = 0; i < countryJSON.length; i++) {
                             if (countryJSON[i].name.includes(circuit.Location[0].Country)) {
                                 const CC = countryJSON[i].code;
-                                document.getElementById(circuit.$.circuitId + "img").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                                document.getElementById(circuit.$.circuitId + "img").src = "https://countryflagsapi.com/png/" + CC 
                             }
                         }
                         for (i = 0; i < circuitJSON.length; i++) {

@@ -9,7 +9,7 @@ function CircuitCard() {
 
     useEffect(() => {
         async function apicall() {
-            await fetch('https://ergast.com/api/f1/current/circuits')
+            await fetch('https://ergast.com/api/f1/' + new Date().getFullYear() + '/circuits')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
@@ -32,7 +32,7 @@ function CircuitCard() {
     }
     return (
         <div className="container text-center" id="circuitCard">
-            <h1 className="pt-4">Constructors of {circuitsData.MRData.CircuitTable[0].$.season} Season</h1>
+            <h1 className="pt-4">Circuits of {circuitsData.MRData.CircuitTable[0].$.season} Season</h1>
             <div className="row  text-center">
 
                 <CircuitIndCard circuitsList={circuitsData} />

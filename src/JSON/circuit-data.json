@@ -248,6 +248,22 @@
         "Altitude": "60m"
     },
     {
+        "Location": "Miami",
+        "Name": "Miami International Autodrome",
+        "Opened": 2022,
+        "FirstGP": 2022,
+        "Length": "5410m",
+        "Altitude": "1m"
+    },
+    {
+        "Location": "Montreal",
+        "Name": "Circuit Gilles Villeneuve",
+        "Opened": 1976,
+        "FirstGP": 1978,
+        "Length": "4361m",
+        "Altitude": "13m"
+    },
+    {
         "Location": "Zandvoort",
         "Name": "Circuit Park Zandvoort",
         "Opened": 1948,

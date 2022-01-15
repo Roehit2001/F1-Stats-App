@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { RaceCard, NextRace } from './RaceCard';
+import OffSeason from './offSeason';
 var parseString = require('xml2js').parseString;
 function HomeCard() {
-
+    const year = new Date().getFullYear();
+    const [errorFree, SetErrorFree] = useState(1);
     const [roundCurrent, setRoundCurrent] = useState(0);
     const [roundPrevious, setRoundPrevious] = useState(0);
     const [roundNext, setRoundNext] = useState(0);
@@ -20,13 +22,14 @@ function HomeCard() {
     const [thirdPrevious, setThirdPrevious] = useState('');
     const [raceDateNext, setRaceDateNext] = useState('');
 
+
+
     useEffect(() => {
         async function apicall1() {
-            await fetch('https://ergast.com/api/f1/current/last/results')
+            await fetch('https://ergast.com/api/f1/' + year + '/last/results')
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        // console.log('call 1', result);
                         setRoundCurrent(result.MRData.RaceTable[0].$.round)
                         setRoundPrevious(+result.MRData.RaceTable[0].$.round - 1)
                         setRoundNext(+result.MRData.RaceTable[0].$.round + 1)
@@ -38,23 +41,24 @@ function HomeCard() {
                     })
 
                 })
-                .catch(err => console.log(err));
+                .catch(err => {
+                    if (err.name === 'TypeError') {
+                        SetErrorFree(0);
+                    }
+                });
         }
 
         apicall1()
 
-    }, [])
+    }, [year, errorFree])
 
     useEffect(() => {
         async function apicall2() {
             // console.log(roundPrevious)
-            fetch(`https://ergast.com/api/f1/current/${roundPrevious}/results`)
+            fetch(`https://ergast.com/api/f1/` + year + `/${roundPrevious}/results`)
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        // console.log(result);
-                        // console.log('call 2')
-                        // setRoundPrevious(result.MRData.RaceTable[0].$.round)
                         setCircuitPrevious(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNamePrevious(result.MRData.RaceTable[0].Race[0].RaceName)
                         setFirstPrevious(result.MRData.RaceTable[0].Race[0].ResultsList[0].Result[0].Driver[0].GivenName + ' ' + result.MRData.RaceTable[0].Race[0].ResultsList[0].Result[0].Driver[0].FamilyName)
@@ -64,20 +68,17 @@ function HomeCard() {
                 })
                 .catch(err => console.log(err));
         }
-        if (roundPrevious > 0)
+        if (roundPrevious > 0 && errorFree)
             apicall2()
-    }, [roundPrevious])
+    }, [roundPrevious, year, errorFree])
 
 
     useEffect(() => {
         async function apicall3() {
-            // console.log(roundNext)
-            fetch(`https://ergast.com/api/f1/current/${roundNext}`)
+            fetch(`https://ergast.com/api/f1/` + year + `/${roundNext}`)
                 .then(res => res.text())
                 .then(data => {
                     parseString(data, function (err, result) {
-                        // console.log(result);
-                        // console.log('call 3')
                         setCircuitNext(result.MRData.RaceTable[0].Race[0].Circuit[0].CircuitName)
                         setRaceNameNext(result.MRData.RaceTable[0].Race[0].RaceName)
                         setRaceDateNext(result.MRData.RaceTable[0].Race[0].Date);
@@ -85,10 +86,12 @@ function HomeCard() {
                 })
                 .catch(err => console.log(err));
         }
-        if (roundNext > 0)
+        if (roundNext > 0 && errorFree)
             apicall3()
-    }, [roundNext])
+    }, [roundNext, year, errorFree])
 
+
+    if (errorFree) {
     return (
         <div className="row">
             <div className="container-cust">
@@ -105,6 +108,13 @@ function HomeCard() {
                 </div>
             </div>
         </div>
+        )
+    }
+    return (
+
+        <OffSeason />
+
+
     )
 }
 

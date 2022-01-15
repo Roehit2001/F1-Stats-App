@@ -84,7 +84,7 @@ const DriversList = ({ driversList }) => {
                             for (var i = 0; i < countryJSON.length; i++) {
                                 if (countryJSON[i].nationality.includes(driver.Driver[0].Nationality)) {
                                     const CC = countryJSON[i].alpha_2_code;
-                                    document.getElementById(driver.$.position + "imageD").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                                    document.getElementById(driver.$.position + "imageD").src = "https://countryflagsapi.com/png/" + CC 
                                 }
                             }
                             return null;
@@ -131,7 +131,7 @@ const ConstructorsList = ({ constructorsList, }) => {
                             for (var i = 0; i < countryJSON.length; i++) {
                                 if (countryJSON[i].nationality.includes(constructor.Constructor[0].Nationality)) {
                                     const CC = countryJSON[i].alpha_2_code;
-                                    document.getElementById(constructor.$.position + "image").src = "https://www.countryflags.io/" + CC + "/flat/64.png"
+                                    document.getElementById(constructor.$.position + "image").src = "https://countryflagsapi.com/png/" + CC 
                                 }
                             }
                             return null;
