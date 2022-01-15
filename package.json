@@ -15,7 +15,6 @@
     "history": "^5.2.0",
     "immer": "^9.0.12",
     "moment": "^2.29.1",
-    "netlify-cli": "^8.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
