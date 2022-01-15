@@ -46,7 +46,6 @@ export default function OffSeason() {
     }, [first])
 
     if (first.length !== 0 && second.length !== 0 && third.length !== 0) {
-        console.log(second)
         return (
             <div className="row">
                 <div className="container-cust">
@@ -115,6 +114,6 @@ export default function OffSeason() {
         )
     }
     return (
-        <div>hi</div>
+        <div>Hi, The Site is under API maintenance. Pls feel free to check other tabs out!</div>
     )
 }
