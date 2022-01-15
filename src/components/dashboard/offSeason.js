@@ -11,7 +11,7 @@ export default function OffSeason() {
     const [race1Circuit, setRace1Circuit] = useState('')
     useEffect(() => {
         async function apicall() {
-            await fetch(`http://ergast.com/api/f1/${year - 1}/driverStandings.json?limit=3`)
+            await fetch(`https://ergast.com/api/f1/${year - 1}/driverStandings.json?limit=3`)
                 .then(res => res.text())
                 .then(data => {
                     data = JSON.parse(data)
@@ -29,7 +29,7 @@ export default function OffSeason() {
 
     useEffect(() => {
         async function apicall() {
-            await fetch('http://ergast.com/api/f1/2022/1.json')
+            await fetch('https://ergast.com/api/f1/2022/1.json')
                 .then(res => res.text())
                 .then(data => {
                     data = JSON.parse(data)
